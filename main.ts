@@ -2,7 +2,7 @@
  *
  * Created by: Giordan Zeina
  * Created on: Oct 2023
- * This program reads the light level of the room and depending on the 
+ * This program reads the light level of the room and depending on the
  * light level it will turn on neopixels.
 */
 
