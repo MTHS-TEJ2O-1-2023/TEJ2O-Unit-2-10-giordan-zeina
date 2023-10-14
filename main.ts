@@ -44,6 +44,7 @@ if (lightLevel > 52) {
   basic.showIcon(IconNames.Happy)
 }
 
+// if the number is greater than 104 light up 2 neopixel
 if (lightLevel > 104) {
   basic.clearScreen()
   neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
@@ -55,6 +56,7 @@ if (lightLevel > 104) {
   basic.showIcon(IconNames.Happy)
 }
 
+// if the number is greater than 156 light up 3 neopixel
 if (lightLevel > 156) {
   basic.clearScreen()
   neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
@@ -66,6 +68,7 @@ if (lightLevel > 156) {
   basic.showIcon(IconNames.Happy)
 }
 
+// if the number is greater than 208 light up 4 neopixel
 if (lightLevel > 208) {
   basic.clearScreen()
   neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
