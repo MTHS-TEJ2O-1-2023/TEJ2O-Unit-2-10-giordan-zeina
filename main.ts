@@ -6,6 +6,7 @@
  * light level it will turn on neopixels.
 */
 
+// Variables
 const lightLevel: number = input.lightLevel()
 let neopixelStrip: neopixel.Strip = null
 
@@ -20,62 +21,79 @@ neopixelStrip.setPixelColor(4, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
 
-// if the number is less than or equal to 51 light up 0 neopixel
-if (lightLevel <= 51) {
+input.onButtonPressed(Button.B, function () {
+// Reset
   basic.clearScreen()
   neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
   neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
   neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
   neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
   neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
+  neopixelStrip.setPixelColor(4, neopixel.colors(NeoPixelColors.Black))
   neopixelStrip.show()
   basic.showIcon(IconNames.Happy)
-}
+})
 
-// if the number is greater than 52 light up 1 neopixel
-if (lightLevel > 52) {
-  basic.clearScreen()
-  neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
-  neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Blue))
-  neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
-  neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
-  neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
-  neopixelStrip.show()
-  basic.showIcon(IconNames.Happy)
-}
 
-// if the number is greater than 104 light up 2 neopixel
-if (lightLevel > 104) {
-  basic.clearScreen()
-  neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
-  neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Blue))
-  neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
-  neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
-  neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
-  neopixelStrip.show()
-  basic.showIcon(IconNames.Happy)
-}
+input.onButtonPressed(Button.A, function() {
+  // if the number is less than or equal to 51 light up 0 neopixel
+  if (lightLevel <= 51) {
+    basic.clearScreen()
+    neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.show()
+    basic.showIcon(IconNames.Happy)
+    }
+    
+    // if the number is greater than 52 light up 1 neopixel
+  if (lightLevel > 52) {
+    basic.clearScreen()
+    neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Blue))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.show()
+    basic.showIcon(IconNames.Happy)
+    }
 
-// if the number is greater than 156 light up 3 neopixel
-if (lightLevel > 156) {
-  basic.clearScreen()
-  neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
-  neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Blue))
-  neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
-  neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Green))
-  neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
-  neopixelStrip.show()
-  basic.showIcon(IconNames.Happy)
-}
+    // if the number is greater than 104 light up 2 neopixel
+  if (lightLevel > 104) {
+    basic.clearScreen()
+    neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Blue))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.show()
+    basic.showIcon(IconNames.Happy)
+    }
 
-// if the number is greater than 208 light up 4 neopixel
-if (lightLevel > 208) {
-  basic.clearScreen()
-  neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
-  neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Blue))
-  neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
-  neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Green))
-  neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.White))
-  neopixelStrip.show()
-  basic.showIcon(IconNames.Happy)
-}
+
+    // if the number is greater than 156 light up 3 neopixel
+  if (lightLevel > 156) {
+    basic.clearScreen()
+    neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Blue))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.show()
+    basic.showIcon(IconNames.Happy)
+    }
+
+    // if the number is greater than 208 light up 4 neopixel
+  if (lightLevel > 208) {
+    basic.clearScreen()
+    neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Blue))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.White))
+    neopixelStrip.show()
+    basic.showIcon(IconNames.Happy)
+    }
+})
