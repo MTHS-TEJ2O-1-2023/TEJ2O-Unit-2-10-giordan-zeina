@@ -35,7 +35,7 @@ input.onButtonPressed(Button.B, function () {
 })
 
 input.onButtonPressed(Button.A, function () {
-  basic.showIcon(IconNames.Yes)
+  basic.showNumber(input.lightLevel())
   // if the number is less than or equal to 51 light up 0 neopixel
   if (lightLevel <= 51) {
     basic.clearScreen()
@@ -83,7 +83,7 @@ input.onButtonPressed(Button.A, function () {
     neopixelStrip.show()
     basic.showIcon(IconNames.Happy)
     }
-
+  
   // if the number is greater than 208 light up 4 neopixel
   if (lightLevel > 208) {
     basic.clearScreen()
