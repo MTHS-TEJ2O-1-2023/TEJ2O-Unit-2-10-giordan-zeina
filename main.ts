@@ -35,6 +35,7 @@ input.onButtonPressed(Button.B, function () {
 })
 
 input.onButtonPressed(Button.A, function () {
+  basic.showIcon(IconNames.Yes)
   // if the number is less than or equal to 51 light up 0 neopixel
   if (lightLevel <= 51) {
     basic.clearScreen()
