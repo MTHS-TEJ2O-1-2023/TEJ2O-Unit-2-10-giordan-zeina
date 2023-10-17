@@ -34,8 +34,7 @@ input.onButtonPressed(Button.B, function () {
   basic.showIcon(IconNames.Happy)
 })
 
-
-input.onButtonPressed(Button.A, function() {
+input.onButtonPressed(Button.A, function () {
   // if the number is less than or equal to 51 light up 0 neopixel
   if (lightLevel <= 51) {
     basic.clearScreen()
@@ -47,8 +46,8 @@ input.onButtonPressed(Button.A, function() {
     neopixelStrip.show()
     basic.showIcon(IconNames.Happy)
     }
-    
-    // if the number is greater than 52 light up 1 neopixel
+  
+  // if the number is greater than 52 light up 1 neopixel
   if (lightLevel > 52) {
     basic.clearScreen()
     neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
@@ -59,7 +58,7 @@ input.onButtonPressed(Button.A, function() {
     neopixelStrip.show()
     basic.showIcon(IconNames.Happy)
     }
-
+  
     // if the number is greater than 104 light up 2 neopixel
   if (lightLevel > 104) {
     basic.clearScreen()
@@ -71,9 +70,8 @@ input.onButtonPressed(Button.A, function() {
     neopixelStrip.show()
     basic.showIcon(IconNames.Happy)
     }
-
-
-    // if the number is greater than 156 light up 3 neopixel
+  
+  // if the number is greater than 156 light up 3 neopixel
   if (lightLevel > 156) {
     basic.clearScreen()
     neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
@@ -85,7 +83,7 @@ input.onButtonPressed(Button.A, function() {
     basic.showIcon(IconNames.Happy)
     }
 
-    // if the number is greater than 208 light up 4 neopixel
+  // if the number is greater than 208 light up 4 neopixel
   if (lightLevel > 208) {
     basic.clearScreen()
     neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
@@ -97,3 +95,4 @@ input.onButtonPressed(Button.A, function() {
     basic.showIcon(IconNames.Happy)
     }
 })
+  
